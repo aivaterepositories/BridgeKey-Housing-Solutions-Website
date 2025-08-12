@@ -9,12 +9,7 @@ const Header = () => {
 
   return (
     <header className="bg-hero-bg text-white py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between md:justify-center md:gap-16 px-6">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img src="/aivate-logo-horizontal-white.png" alt="AIVATE Logo" className="h-8" />
-        </div>
-        
+      <div className="max-w-7xl mx-auto flex items-center justify-end md:justify-center md:gap-16 px-6">
         {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <button 
