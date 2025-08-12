@@ -7,13 +7,13 @@
 @layer base {
   :root {
     /* Brand colors */
-    --primary: 243 78% 58%;
-    --primary-dark: 243 89% 35%;
-    --primary-light: 243 78% 68%;
+    --primary: 0 100% 25.3%; /* #810000 */
+    --primary-dark: 0 100% 15%;
+    --primary-light: 0 100% 35%;
     --secondary: 195 100% 50%;
     --secondary-light: 195 100% 70%;
     --hero-bg: 233 47% 7%;
-    --hero-accent: 243 100% 82%;
+    --hero-accent: 0 100% 82%;
     
     /* Core system colors */
     --background: 0 0% 100%;
@@ -32,7 +32,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 243 78% 58%;
+    --ring: 0 100% 25.3%;
     --radius: 0.5rem;
     
     /* Gradients */
@@ -66,7 +66,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 243 78% 58%;
+    --ring: 0 100% 25.3%;
   }
 }
 
