@@ -88,7 +88,7 @@ const Step = ({ icon, title, description, desktopClass = '' }: { icon: string; t
 const ReferralRoute = () => {
   return (
     <section className="pt-8 pb-20 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold mb-4">
             The <span className="text-primary">Referral Route</span>
