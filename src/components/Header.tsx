@@ -35,7 +35,7 @@ const Header = () => {
             variant="outline"
             className="text-sm text-white border-white hover:bg-white hover:text-hero-bg bg-transparent"
           >
-            <a href="mailto:contactus@bkhs.net">Contact Us</a>
+            <a href="mailto:sales@aivate.net">Contact Us</a>
           </Button>
         </nav>
         
