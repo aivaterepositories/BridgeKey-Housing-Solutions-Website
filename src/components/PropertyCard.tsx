@@ -114,8 +114,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
               <span className="text-muted-foreground ml-1">/{period}</span>
             </div>
             <Button 
+              variant="outline"
               size="sm"
-              className="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center p-0 hover:bg-primary hover:text-white transition-smooth"
+              className="text-primary border-primary hover:bg-primary hover:text-primary-foreground"
             >
               Premium
             </Button>
