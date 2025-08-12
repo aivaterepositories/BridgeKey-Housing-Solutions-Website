@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCreateRequest }) => {
         style={{ backgroundImage: 'url(/resource-uploads/d0852ee6-fdb9-4eeb-9470-1d91e0d3662e.png)' }}
       ></div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <h1 className="text-7xl md:text-8xl font-bold mb-6 leading-tight">
           <span className="text-primary">Let the funnel guide</span>
           <br />
