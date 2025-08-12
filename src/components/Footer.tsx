@@ -53,9 +53,9 @@ const Footer = () => {
               onClick={handleContactClick}
               className="hover:text-white transition-smooth cursor-pointer text-sm"
             >
-              +639123456789 | help@bkhs.net
+              +639123456789 | sales@aivate.net
             </button>
-            <p className="text-xs">&copy; 2024 BKHS. All rights reserved.</p>
+            <p className="text-xs">&copy; 2024 Bridgekey Housing Solutions. All rights reserved.</p>
           </div>
         </div>
       </div>
