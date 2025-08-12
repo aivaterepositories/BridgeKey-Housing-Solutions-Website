@@ -7,11 +7,6 @@ const Footer = () => {
     // Add social media links here
   };
 
-  const handleContactClick = () => {
-    console.log('Opening contact');
-    // Add contact logic here
-  };
-
   return (
     <footer className="bg-hero-bg text-white py-8">
       <div className="max-w-5xl mx-auto px-6">
@@ -49,12 +44,15 @@ const Footer = () => {
 
           {/* Contact and Copyright Group */}
           <div className="text-center text-hero-accent space-y-2">
-            <button 
-              onClick={handleContactClick}
-              className="hover:text-white transition-smooth cursor-pointer text-sm"
-            >
-              +639123456789 | sales@aivate.net
-            </button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-x-2 text-sm">
+              <a href="tel:+639123456789" className="hover:text-white transition-smooth">
+                +639123456789
+              </a>
+              <span className="hidden sm:inline">|</span>
+              <a href="mailto:sales@aivate.net" className="hover:text-white transition-smooth">
+                sales@aivate.net
+              </a>
+            </div>
             <p className="text-xs">&copy; 2024 Bridgekey Housing Solutions. All rights reserved.</p>
           </div>
         </div>
