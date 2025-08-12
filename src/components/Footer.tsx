@@ -17,8 +17,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo and Brand */}
-          <div className="flex items-center order-1">
-            <img src="/aivate-logo-horizontal-white.png" alt="AIVATE Logo" className="h-8" />
+          <div className="flex items-center order-1 gap-3">
+            <img src="/bkhs-icon-red.png" alt="BKHS Logo Icon" className="h-10" />
+            <img src="/bkhs-text-white.png" alt="BKHS Logo Text" className="h-5" />
           </div>
           
           {/* Middle section for contact and copyright */}
