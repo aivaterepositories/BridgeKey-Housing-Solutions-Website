@@ -22,13 +22,13 @@ const Header = () => {
             onClick={() => handleNavClick('about')}
             className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer"
           >
-            About Us
+            Who We Are
           </button>
           <button 
             onClick={() => handleNavClick('services')}
             className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer"
           >
-            Services
+            What We Do
           </button>
           <Button 
             asChild
