@@ -33,15 +33,12 @@ const Footer = () => {
               >
                 <Twitter className="w-5 h-5" />
               </button>
-              <a 
-                href="https://linkedin.com/company/bridgekeyhousingsolutions"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
+              <button 
+                onClick={() => handleSocialClick('LinkedIn')}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary transition-smooth flex items-center justify-center"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </button>
             </div>
           </div>
 
