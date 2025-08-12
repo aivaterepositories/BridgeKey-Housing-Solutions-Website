@@ -57,7 +57,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           {isFeatured && (
             <div className="absolute top-4 left-4">
               <Button variant="featured" size="sm" className="pointer-events-none">
-                ⭐ Featured
+                Featured
               </Button>
             </div>
           )}
@@ -118,7 +118,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
               size="sm"
               className="rounded-full"
             >
-              Premium
+              ⭐ Premium
             </Button>
           </div>
           
