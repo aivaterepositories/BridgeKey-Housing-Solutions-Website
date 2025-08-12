@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="bg-hero-bg text-white py-8">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex flex-col items-center gap-6">
-          {/* Main content row */}
+          {/* Logo and Social Media Row */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 text-center">
             {/* Logo and Brand */}
             <div className="flex items-center gap-3">
@@ -45,16 +45,16 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </button>
             </div>
+          </div>
 
-            {/* Contact */}
-            <div className="text-hero-accent">
-              <button 
-                onClick={handleContactClick}
-                className="hover:text-white transition-smooth cursor-pointer text-sm"
-              >
-                +639123456789 | help@bkhs.net
-              </button>
-            </div>
+          {/* Contact */}
+          <div className="text-hero-accent">
+            <button 
+              onClick={handleContactClick}
+              className="hover:text-white transition-smooth cursor-pointer text-sm"
+            >
+              +639123456789 | help@bkhs.net
+            </button>
           </div>
 
           {/* Copyright */}
