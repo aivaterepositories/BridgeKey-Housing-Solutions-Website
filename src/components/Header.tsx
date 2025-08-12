@@ -51,7 +51,7 @@ const Header = () => {
       <div className="max-w-5xl mx-auto flex items-center justify-between md:justify-center md:gap-12 px-6">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
+          <img src="/bkhs-logo-white.png" alt="BKHS Logo" className="h-10" />
           <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
         </div>
 

@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 text-center">
             {/* Logo and Brand */}
             <div className="flex items-center gap-3">
-              <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
+              <img src="/bkhs-logo-white.png" alt="BKHS Logo" className="h-10" />
               <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
             </div>
             
