@@ -47,19 +47,15 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="text-hero-accent">
+          {/* Contact and Copyright Group */}
+          <div className="text-center text-hero-accent space-y-2">
             <button 
               onClick={handleContactClick}
               className="hover:text-white transition-smooth cursor-pointer text-sm"
             >
               +639123456789 | help@bkhs.net
             </button>
-          </div>
-
-          {/* Copyright */}
-          <div className="text-center text-hero-accent">
-            <p className="text-xs mt-1">&copy; 2024 BKHS. All rights reserved.</p>
+            <p className="text-xs">&copy; 2024 BKHS. All rights reserved.</p>
           </div>
         </div>
       </div>
