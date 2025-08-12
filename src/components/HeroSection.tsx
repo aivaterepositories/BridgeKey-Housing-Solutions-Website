@@ -38,7 +38,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCreateRequest }) => {
             variant="hero"
             size="lg"
             onClick={onCreateRequest}
-            className="px-12 py-6 text-2xl bg-teal-700 hover:bg-teal-800 text-[#99F6E4] border-none transition-transform duration-500 ease-in-out transform hover:scale-105 active:scale-95"
+            className="px-12 py-6 text-2xl bg-teal-700 hover:bg-teal-800 text-white border-none transition-transform duration-500 ease-in-out transform hover:scale-105 active:scale-95"
           >
             <Plus className="w-7 h-7 mr-3" />
             CREATE REQUEST

@@ -32,7 +32,7 @@ const Header = () => {
           <Button 
             asChild
             variant="outline"
-            className="text-sm text-[#99F6E4] border-[#99F6E4] hover:bg-[#99F6E4] hover:text-hero-bg bg-transparent"
+            className="text-sm text-white border-white hover:bg-white hover:text-hero-bg bg-transparent"
           >
             <a href="mailto:contactus@aivate.net">Contact Us</a>
           </Button>

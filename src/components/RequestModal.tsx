@@ -154,7 +154,7 @@ const RequestModal: React.FC<RequestModalProps> = ({
                 type="submit"
                 variant="hero"
                 size="lg"
-                className="w-full bg-teal-700 hover:bg-teal-800 text-[#99F6E4] border-none transition-transform duration-500 ease-in-out transform hover:scale-105 active:scale-95"
+                className="w-full bg-teal-700 hover:bg-teal-800 text-white border-none transition-transform duration-500 ease-in-out transform hover:scale-105 active:scale-95"
               >
                 {submitButtonIcon}
                 {submitButtonText}
