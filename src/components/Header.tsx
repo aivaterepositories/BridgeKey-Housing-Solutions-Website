@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <header className={cn(
-      "bg-primary text-white py-4 z-50",
+      "bg-black text-white py-4 z-50",
       "fixed top-0 left-0 right-0 transition-transform duration-300 ease-in-out",
       isHeaderVisible ? "translate-y-0" : "-translate-y-full"
     )}>
@@ -92,7 +92,7 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       <div className={cn(
-        "md:hidden absolute top-full left-0 w-full bg-primary shadow-lg transition-all duration-300 ease-in-out",
+        "md:hidden absolute top-full left-0 w-full bg-black shadow-lg transition-all duration-300 ease-in-out",
         isMobileMenuOpen 
           ? "opacity-100 visible translate-y-0" 
           : "opacity-0 invisible -translate-y-4 pointer-events-none"
