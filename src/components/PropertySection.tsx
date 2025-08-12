@@ -46,7 +46,7 @@ const PropertySection = () => {
 
   return (
     <section className="py-20 bg-transparent">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
             <span className="text-primary">Browse All</span> Property
