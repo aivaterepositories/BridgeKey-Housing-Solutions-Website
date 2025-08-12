@@ -11,9 +11,8 @@ const Header = () => {
     <header className="bg-hero-bg text-white py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between md:justify-center md:gap-16 px-6">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <img src="/bkhs-icon-red.png" alt="BKHS Logo Icon" className="h-10" />
-          <img src="/bkhs-text-white.png" alt="BKHS Logo Text" className="h-5" />
+        <div className="flex items-center">
+          <img src="/aivate-logo-horizontal-white.png" alt="AIVATE Logo" className="h-8" />
         </div>
         
         {/* Navigation */}
