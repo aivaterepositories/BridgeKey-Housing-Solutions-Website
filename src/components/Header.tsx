@@ -11,8 +11,9 @@ const Header = () => {
     <header className="bg-hero-bg text-white py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
           <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
+          <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
         </div>
 
         {/* Navigation */}

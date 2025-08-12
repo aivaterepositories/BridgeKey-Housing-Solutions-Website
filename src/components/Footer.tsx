@@ -17,8 +17,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo and Brand */}
-          <div className="flex items-center order-1">
+          <div className="flex items-center gap-3 order-1">
             <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
+            <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
           </div>
           
           {/* Middle section for contact and copyright */}
