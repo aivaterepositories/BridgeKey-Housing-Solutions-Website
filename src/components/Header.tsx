@@ -18,16 +18,16 @@ const Header = () => {
 
         {/* Navigation for Desktop - Centered */}
         <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <nav className="flex items-center space-x-8">
+          <nav className="flex items-center space-x-12">
             <button 
               onClick={() => handleNavClick('about')}
-              className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer"
+              className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer whitespace-nowrap"
             >
               Who We Are
             </button>
             <button 
               onClick={() => handleNavClick('services')}
-              className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer"
+              className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer whitespace-nowrap"
             >
               What We Do
             </button>
