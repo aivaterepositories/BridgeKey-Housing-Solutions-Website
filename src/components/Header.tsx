@@ -9,7 +9,12 @@ const Header = () => {
 
   return (
     <header className="bg-hero-bg text-white py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-end md:justify-center md:gap-16 px-6">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
+        </div>
+
         {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <button 
@@ -29,7 +34,7 @@ const Header = () => {
             variant="outline"
             className="text-sm text-white border-white hover:bg-white hover:text-hero-bg bg-transparent"
           >
-            <a href="mailto:contactus@aivate.net">Contact Us</a>
+            <a href="mailto:contactus@bkhs.net">Contact Us</a>
           </Button>
         </nav>
         

@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo and Brand */}
           <div className="flex items-center order-1">
-            <img src="/aivate-logo-horizontal-white.png" alt="AIVATE Logo" className="h-8" />
+            <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
           </div>
           
           {/* Middle section for contact and copyright */}
@@ -27,9 +27,9 @@ const Footer = () => {
               onClick={handleContactClick}
               className="hover:text-white transition-smooth cursor-pointer text-sm"
             >
-              +639123456789 | help@aivate.net
+              +639123456789 | help@bkhs.net
             </button>
-            <p className="text-xs mt-1">&copy; 2024 AIVATE. All rights reserved.</p>
+            <p className="text-xs mt-1">&copy; 2024 BKHS. All rights reserved.</p>
           </div>
           
           {/* Social Media */}
