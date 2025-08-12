@@ -72,7 +72,7 @@ const Header = () => {
           <Button 
             asChild
             variant="outline"
-            className="text-sm text-white border-white hover:bg-white hover:text-hero-bg bg-transparent"
+            className="text-sm text-white border-white hover:bg-primary hover:border-primary bg-transparent"
           >
             <a href="mailto:sales@aivate.net">Contact Us</a>
           </Button>
@@ -113,7 +113,7 @@ const Header = () => {
           <Button 
             asChild
             variant="outline"
-            className="text-lg text-white border-white hover:bg-white hover:text-hero-bg bg-transparent px-6 py-3"
+            className="text-lg text-white border-white hover:bg-primary hover:border-primary bg-transparent px-6 py-3"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <a href="mailto:sales@aivate.net">Contact Us</a>
