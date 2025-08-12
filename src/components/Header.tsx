@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleNavClick = (section: string) => {
     console.log(`Navigating to ${section}`);
@@ -11,8 +14,40 @@ const Header = () => {
     setIsMobileMenuOpen(false); // Close menu on nav item click
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (isMobileMenuOpen) {
+        // If the mobile menu is open, we want the header to stay visible.
+        setIsHeaderVisible(true);
+        return;
+      }
+
+      if (currentScrollY > 100) {
+        // Hide header on scroll down, show on scroll up
+        setIsHeaderVisible(currentScrollY < lastScrollY);
+      } else {
+        // Always show header when near the top of the page
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY, isMobileMenuOpen]);
+
   return (
-    <header className="bg-hero-bg text-white py-4 relative z-20">
+    <header className={cn(
+      "bg-hero-bg text-white py-4 z-50",
+      "fixed top-0 left-0 right-0 transition-transform duration-300 ease-in-out",
+      isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+    )}>
       <div className="max-w-5xl mx-auto flex items-center justify-between md:justify-center md:gap-12 px-6">
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -56,32 +91,35 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-hero-bg shadow-lg">
-          <nav className="flex flex-col items-center space-y-6 py-8">
-            <button 
-              onClick={() => handleNavClick('about')}
-              className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
-            >
-              Who We Are
-            </button>
-            <button 
-              onClick={() => handleNavClick('services')}
-              className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
-            >
-              What We Do
-            </button>
-            <Button 
-              asChild
-              variant="outline"
-              className="text-lg text-white border-white hover:bg-white hover:text-hero-bg bg-transparent px-6 py-3"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <a href="mailto:sales@aivate.net">Contact Us</a>
-            </Button>
-          </nav>
-        </div>
-      )}
+      <div className={cn(
+        "md:hidden absolute top-full left-0 w-full bg-hero-bg shadow-lg transition-all duration-300 ease-in-out",
+        isMobileMenuOpen 
+          ? "opacity-100 visible translate-y-0" 
+          : "opacity-0 invisible -translate-y-4 pointer-events-none"
+      )}>
+        <nav className="flex flex-col items-center space-y-6 py-8">
+          <button 
+            onClick={() => handleNavClick('about')}
+            className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
+          >
+            Who We Are
+          </button>
+          <button 
+            onClick={() => handleNavClick('services')}
+            className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
+          >
+            What We Do
+          </button>
+          <Button 
+            asChild
+            variant="outline"
+            className="text-lg text-white border-white hover:bg-white hover:text-hero-bg bg-transparent px-6 py-3"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <a href="mailto:sales@aivate.net">Contact Us</a>
+          </Button>
+        </nav>
+      </div>
     </header>
   );
 };

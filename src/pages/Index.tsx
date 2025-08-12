@@ -70,12 +70,14 @@ const Index = () => {
 
       <div className="relative z-10">
         <Header />
-        <div ref={heroSectionRef}>
-          <HeroSection onCreateRequest={() => setIsModalOpen(true)} />
-        </div>
-        <ReferralRoute />
-        <PropertySection />
-        <PartnershipSection />
+        <main className="pt-[72px]">
+          <div ref={heroSectionRef}>
+            <HeroSection onCreateRequest={() => setIsModalOpen(true)} />
+          </div>
+          <ReferralRoute />
+          <PropertySection />
+          <PartnershipSection />
+        </main>
         <Footer />
       </div>
 
