@@ -9,15 +9,15 @@ const Header = () => {
 
   return (
     <header className="bg-hero-bg text-white py-4">
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between px-6">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img src="/bkhs-logo-red.png" alt="BKHS Logo" className="h-10" />
           <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
         </div>
 
-        {/* Centered Navigation for Desktop */}
-        <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-8">
+        {/* Navigation for Desktop */}
+        <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => handleNavClick('about')}
             className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer"
