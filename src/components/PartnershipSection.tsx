@@ -26,6 +26,9 @@ const PartnershipSection = () => {
     }
   ];
 
+  // Duplicate the partners array to create a seamless loop
+  const extendedPartners = [...partners, ...partners];
+
   return (
     <section className="py-20 bg-transparent">
       <div className="max-w-5xl mx-auto px-6">
@@ -38,42 +41,26 @@ const PartnershipSection = () => {
       
       <div className="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
         <div className="flex flex-nowrap animate-infinite-scroll">
-          <ul className="flex items-center justify-start flex-nowrap flex-shrink-0">
-            {partners.map((partner, index) => (
-              <li key={index} className={cn(
+          {extendedPartners.map((partner, index) => (
+            <div 
+              key={index} 
+              className={cn(
                 "flex-shrink-0 flex justify-center items-center",
                 {
                   'w-40': partner.name === 'Sedgwick',
                   'w-48': partner.name === 'CRS',
                   'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
                 }
-              )}>
-                <img
-                  src={partner.logoUrl}
-                  alt={`${partner.name} logo`}
-                  className={cn('h-12 object-contain', partner.customClass)}
-                />
-              </li>
-            ))}
-          </ul>
-          <ul className="flex items-center justify-start flex-nowrap flex-shrink-0" aria-hidden="true">
-            {partners.map((partner, index) => (
-              <li key={index} className={cn(
-                "flex-shrink-0 flex justify-center items-center",
-                {
-                  'w-40': partner.name === 'Sedgwick',
-                  'w-48': partner.name === 'CRS',
-                  'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
-                }
-              )}>
-                <img
-                  src={partner.logoUrl}
-                  alt={`${partner.name} logo`}
-                  className={cn('h-12 object-contain', partner.customClass)}
-                />
-              </li>
-            ))}
-          </ul>
+              )}
+              aria-hidden={index >= partners.length}
+            >
+              <img
+                src={partner.logoUrl}
+                alt={`${partner.name} logo`}
+                className={cn('h-12 object-contain', partner.customClass)}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
