@@ -77,7 +77,7 @@ const Step = ({ icon, title, description, desktopClass = '' }: { icon: string; t
     <img 
       src={icon} 
       alt={title} 
-      className="w-28 h-28 mb-4 transition-transform duration-500 ease-in-out hover:scale-110"
+      className="w-28 h-28 object-contain mb-4 transition-transform duration-500 ease-in-out hover:scale-110"
     />
     <h3 className="text-lg font-semibold whitespace-nowrap">{title}</h3>
     <div className="w-16 h-0.5 bg-foreground my-3"></div>
