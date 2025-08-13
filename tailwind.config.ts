@@ -106,6 +106,10 @@ export default {
             from: { opacity: '1' },
             to: { opacity: '0' },
         },
+        'infinite-scroll': {
+          'from': { transform: 'translateX(0)' },
+          'to': { transform: 'translateX(-100%)' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -114,6 +118,7 @@ export default {
         'fade-out': 'fade-out 2.5s ease-in-out forwards',
         'modal-fade-in': 'modal-fade-in 0.3s ease-out',
         'modal-fade-out': 'modal-fade-out 0.3s ease-out',
+        'infinite-scroll': 'infinite-scroll 40s linear infinite',
 			}
 		}
 	},
