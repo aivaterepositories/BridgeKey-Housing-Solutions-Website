@@ -14,6 +14,7 @@ const PartnershipSection = () => {
     {
       name: 'Sedgwick',
       logoUrl: '/sedgwick-logo.png',
+      customClass: 'scale-150',
     },
     {
       name: 'ale solutions',
