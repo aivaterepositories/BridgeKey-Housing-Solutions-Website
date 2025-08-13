@@ -19,6 +19,10 @@ const PartnershipSection = () => {
     {
       name: 'ale solutions',
       logoUrl: '/ale_solutions_padded.png',
+    },
+    {
+      name: 'National Corporate Housing',
+      logoUrl: '/nationalcorporatehousing_logo.png',
     }
   ];
 
