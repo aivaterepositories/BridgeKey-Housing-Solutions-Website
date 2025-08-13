@@ -46,7 +46,7 @@ const PartnershipSection = () => {
                 src={partner.logoUrl}
                 alt={`${partner.name} logo`}
                 className={`max-w-full max-h-full object-contain ${
-                  partner.isLast ? 'scale-125' : 'scale-110'
+                  partner.isLast ? 'scale-110' : 'scale-100'
                 }`}
               />
             </div>
