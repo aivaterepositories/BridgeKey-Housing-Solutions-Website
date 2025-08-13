@@ -41,7 +41,11 @@ const PartnershipSection = () => {
           {partners.map((partner, index) => (
             <li key={index} className={cn(
               "flex-shrink-0 flex justify-center items-center",
-              partner.name === 'Sedgwick' ? 'w-40' : 'w-64'
+              {
+                'w-40': partner.name === 'Sedgwick',
+                'w-48': partner.name === 'CRS',
+                'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
+              }
             )}>
               <img
                 src={partner.logoUrl}
@@ -55,7 +59,11 @@ const PartnershipSection = () => {
           {partners.map((partner, index) => (
             <li key={index} className={cn(
               "flex-shrink-0 flex justify-center items-center",
-              partner.name === 'Sedgwick' ? 'w-40' : 'w-64'
+              {
+                'w-40': partner.name === 'Sedgwick',
+                'w-48': partner.name === 'CRS',
+                'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
+              }
             )}>
               <img
                 src={partner.logoUrl}
