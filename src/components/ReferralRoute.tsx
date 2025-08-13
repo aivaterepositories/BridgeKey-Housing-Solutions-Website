@@ -2,7 +2,7 @@ import React from 'react';
 
 const desktopSteps = [
   {
-    icon: '/referral-steps/get-in-touch.png',
+    icon: '/referral-steps/create-request.png',
     title: 'Create Request',
     description: 'Submit a request to us so we can check for available properties.',
     desktopClass: 'md:col-start-1',
@@ -41,7 +41,7 @@ const desktopSteps = [
 
 const mobileStepData = [
   {
-    icon: '/referral-steps/get-in-touch.png',
+    icon: '/referral-steps/create-request.png',
     title: 'Create Request',
     description: 'Submit a request to us so we can check for available properties.',
   },
