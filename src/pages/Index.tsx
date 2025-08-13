@@ -61,8 +61,8 @@ const Index = () => {
           }}
         >
           <img 
-            src="/background-decoration.png" 
-            alt="background decoration" 
+            src="/fixed-background-icon.png" 
+            alt="fixed background icon" 
             className="w-full h-auto"
           />
         </div>
