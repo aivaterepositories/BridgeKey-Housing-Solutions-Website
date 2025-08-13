@@ -62,10 +62,15 @@ const RequestModal: React.FC<RequestModalProps> = ({
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const response = await fetch('https://cloud.activepieces.com/api/v1/webhooks/Yw0vpHAFGsTfYQ4VH8rbj', {
+      const supabaseUrl = 'https://tfzvhsrdvkycsusnknso.supabase.co/functions/v1/send-request';
+      const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmenZoc3Jkdmt5Y3N1c25rbnNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5NjcwNDQsImV4cCI6MjA3MDU0MzA0NH0.NgPmDyb2mOjY1sI8i0Ff3LZgHhx9oRXFHBbLyE0cZ8U';
+
+      const response = await fetch(supabaseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+          'apikey': supabaseAnonKey,
         },
         body: JSON.stringify(values),
       });
@@ -74,7 +79,7 @@ const RequestModal: React.FC<RequestModalProps> = ({
         throw new Error('Network response was not ok');
       }
 
-      console.log('Form submitted to webhook:', values);
+      console.log('Form submitted via edge function:', values);
       toast.success('Request submitted!', {
         description: 'Thank you for your request. We will get back to you shortly.',
       });
