@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -22,7 +22,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
-import { Plus } from 'lucide-react';
+import { Plus, Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address.' }),
@@ -47,6 +47,7 @@ const RequestModal: React.FC<RequestModalProps> = ({
   submitButtonText = 'CREATE REQUEST',
   submitButtonIcon = <Plus className="w-5 h-5 mr-2" />,
 }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -58,13 +59,35 @@ const RequestModal: React.FC<RequestModalProps> = ({
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log('Form submitted:', values);
-    toast.success('Request submitted!', {
-      description: 'Thank you for your request. We will get back to you shortly.',
-    });
-    onOpenChange(false);
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('https://cloud.activepieces.com/api/v1/webhooks/Yw0vpHAFGsTfYQ4VH8rbj', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      console.log('Form submitted to webhook:', values);
+      toast.success('Request submitted!', {
+        description: 'Thank you for your request. We will get back to you shortly.',
+      });
+      onOpenChange(false);
+      form.reset();
+    } catch (error) {
+      console.error('Failed to submit request:', error);
+      toast.error('Submission failed.', {
+        description: 'There was a problem submitting your request. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -155,9 +178,16 @@ const RequestModal: React.FC<RequestModalProps> = ({
                 variant="hero"
                 size="lg"
                 className="w-full bg-teal-700 hover:bg-teal-800 text-white border-none transition-transform duration-500 ease-in-out transform hover:scale-105 active:scale-95"
+                disabled={isSubmitting}
               >
-                {submitButtonIcon}
-                {submitButtonText}
+                {isSubmitting ? (
+                  <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Submitting...</>
+                ) : (
+                  <>
+                    {submitButtonIcon}
+                    {submitButtonText}
+                  </>
+                )}
               </Button>
             </DialogFooter>
           </form>
