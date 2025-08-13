@@ -64,7 +64,7 @@ const Header = () => {
             >
               Who We Are
             </button>
-            <span className="absolute top-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+            <span className="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
           </div>
           <div className="relative group py-2">
             <button 
@@ -73,7 +73,7 @@ const Header = () => {
             >
               What We Do
             </button>
-            <span className="absolute top-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+            <span className="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
           </div>
           <Button 
             asChild
@@ -111,7 +111,7 @@ const Header = () => {
             >
               Who We Are
             </button>
-            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
           </div>
           <div className="relative group">
             <button 
@@ -120,7 +120,7 @@ const Header = () => {
             >
               What We Do
             </button>
-            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
           </div>
           <Button 
             asChild
