@@ -10,7 +10,6 @@ const PartnershipSection = () => {
     {
       name: 'CRS',
       logoUrl: '/CRS-blk-and-Red-Door.png',
-      customClass: 'scale-75',
     },
     {
       name: 'Sedgwick',
