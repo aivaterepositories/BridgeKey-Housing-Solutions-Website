@@ -53,7 +53,17 @@ const Footer = () => {
                 sales@aivate.net
               </a>
             </div>
-            <p className="text-xs">Powered by AiVate Solutions</p>
+            <p className="text-xs">
+              Powered by{' '}
+              <a 
+                href="http://www.aivate.net" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="underline hover:text-white transition-smooth"
+              >
+                AiVate Solutions
+              </a>
+            </p>
             <p className="text-xs">&copy; 2025 Bridgekey Housing Solutions. All rights reserved.</p>
           </div>
         </div>
