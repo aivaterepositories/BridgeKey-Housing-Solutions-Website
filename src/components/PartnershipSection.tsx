@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 const PartnershipSection = () => {
   const partners = [
@@ -13,6 +14,7 @@ const PartnershipSection = () => {
       logoUrl: '/CRS-blk-and-Red-Door.png',
       offsetY: 0,
       isLast: false,
+      customClass: 'scale-75', // Scaled down the CRS logo
     },
     {
       name: 'Sedgwick',
@@ -51,9 +53,11 @@ const PartnershipSection = () => {
               <img
                 src={partner.logoUrl}
                 alt={`${partner.name} logo`}
-                className={`max-w-full max-h-full object-contain ${
-                  partner.isLast ? 'scale-110' : 'scale-100'
-                }`}
+                className={cn(
+                  'max-w-full max-h-full object-contain',
+                  partner.isLast ? 'scale-110' : 'scale-100',
+                  partner.customClass
+                )}
               />
             </div>
           ))}
