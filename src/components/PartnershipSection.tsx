@@ -15,6 +15,12 @@ const PartnershipSection = () => {
       isLast: false,
     },
     {
+      name: 'Sedgwick',
+      logoUrl: '/sedgwick-logo.png',
+      offsetY: 0,
+      isLast: false,
+    },
+    {
       name: 'ale solutions',
       logoUrl: '/ale_solutions_padded.png',
       offsetY: -15,
