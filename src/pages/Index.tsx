@@ -51,7 +51,7 @@ const Index = () => {
       {shouldRenderImage && (
         <div 
           className={cn(
-            "fixed top-1/2 right-8 w-96 -translate-y-1/2 pointer-events-none z-0",
+            "fixed top-1/2 right-8 w-[30rem] -translate-y-1/2 pointer-events-none z-0",
             isBgImageVisible ? "animate-fade-in" : "animate-fade-out"
           )}
           onAnimationEnd={() => {
