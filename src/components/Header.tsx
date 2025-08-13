@@ -57,18 +57,24 @@ const Header = () => {
 
         {/* Navigation for Desktop */}
         <nav className="hidden md:flex items-center space-x-12">
-          <button 
-            onClick={() => handleNavClick('about')}
-            className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer whitespace-nowrap"
-          >
-            Who We Are
-          </button>
-          <button 
-            onClick={() => handleNavClick('services')}
-            className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer whitespace-nowrap"
-          >
-            What We Do
-          </button>
+          <div className="relative group py-2">
+            <button 
+              onClick={() => handleNavClick('about')}
+              className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer whitespace-nowrap"
+            >
+              Who We Are
+            </button>
+            <span className="absolute top-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+          </div>
+          <div className="relative group py-2">
+            <button 
+              onClick={() => handleNavClick('services')}
+              className="text-sm text-white hover:text-hero-accent transition-smooth cursor-pointer whitespace-nowrap"
+            >
+              What We Do
+            </button>
+            <span className="absolute top-0 left-0 w-full h-1 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+          </div>
           <Button 
             asChild
             variant="outline"
@@ -98,18 +104,24 @@ const Header = () => {
           : "opacity-0 invisible -translate-y-4 pointer-events-none"
       )}>
         <nav className="flex flex-col items-center space-y-6 py-8">
-          <button 
-            onClick={() => handleNavClick('about')}
-            className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
-          >
-            Who We Are
-          </button>
-          <button 
-            onClick={() => handleNavClick('services')}
-            className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
-          >
-            What We Do
-          </button>
+          <div className="relative group">
+            <button 
+              onClick={() => handleNavClick('about')}
+              className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
+            >
+              Who We Are
+            </button>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+          </div>
+          <div className="relative group">
+            <button 
+              onClick={() => handleNavClick('services')}
+              className="text-lg text-white hover:text-hero-accent transition-smooth cursor-pointer"
+            >
+              What We Do
+            </button>
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center"></span>
+          </div>
           <Button 
             asChild
             variant="outline"
