@@ -36,43 +36,45 @@ const PartnershipSection = () => {
         </div>
       </div>
       
-      <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-        <ul className="flex items-center justify-start animate-infinite-scroll">
-          {partners.map((partner, index) => (
-            <li key={index} className={cn(
-              "flex-shrink-0 flex justify-center items-center",
-              {
-                'w-40': partner.name === 'Sedgwick',
-                'w-48': partner.name === 'CRS',
-                'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
-              }
-            )}>
-              <img
-                src={partner.logoUrl}
-                alt={`${partner.name} logo`}
-                className={cn('h-12 object-contain', partner.customClass)}
-              />
-            </li>
-          ))}
-        </ul>
-        <ul className="flex items-center justify-start animate-infinite-scroll" aria-hidden="true">
-          {partners.map((partner, index) => (
-            <li key={index} className={cn(
-              "flex-shrink-0 flex justify-center items-center",
-              {
-                'w-40': partner.name === 'Sedgwick',
-                'w-48': partner.name === 'CRS',
-                'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
-              }
-            )}>
-              <img
-                src={partner.logoUrl}
-                alt={`${partner.name} logo`}
-                className={cn('h-12 object-contain', partner.customClass)}
-              />
-            </li>
-          ))}
-        </ul>
+      <div className="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+        <div className="flex animate-infinite-scroll">
+          <ul className="flex items-center justify-center flex-shrink-0">
+            {partners.map((partner, index) => (
+              <li key={index} className={cn(
+                "flex-shrink-0 flex justify-center items-center",
+                {
+                  'w-40': partner.name === 'Sedgwick',
+                  'w-48': partner.name === 'CRS',
+                  'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
+                }
+              )}>
+                <img
+                  src={partner.logoUrl}
+                  alt={`${partner.name} logo`}
+                  className={cn('h-12 object-contain', partner.customClass)}
+                />
+              </li>
+            ))}
+          </ul>
+          <ul className="flex items-center justify-center flex-shrink-0" aria-hidden="true">
+            {partners.map((partner, index) => (
+              <li key={index} className={cn(
+                "flex-shrink-0 flex justify-center items-center",
+                {
+                  'w-40': partner.name === 'Sedgwick',
+                  'w-48': partner.name === 'CRS',
+                  'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
+                }
+              )}>
+                <img
+                  src={partner.logoUrl}
+                  alt={`${partner.name} logo`}
+                  className={cn('h-12 object-contain', partner.customClass)}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
