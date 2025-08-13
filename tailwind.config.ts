@@ -101,6 +101,10 @@ export default {
         'infinite-scroll': {
           'from': { transform: 'translateX(0)' },
           'to': { transform: 'translateX(-50%)' },
+        },
+        'long-scroll': {
+          'from': { transform: 'translateX(0)' },
+          'to': { transform: 'translateX(-80%)' },
         }
 			},
 			animation: {
@@ -109,6 +113,7 @@ export default {
         'modal-fade-in': 'modal-fade-in 0.3s ease-out',
         'modal-fade-out': 'modal-fade-out 0.3s ease-out',
         'infinite-scroll': 'infinite-scroll 40s linear infinite',
+        'long-scroll': 'long-scroll 160s linear infinite',
 			}
 		}
 	},

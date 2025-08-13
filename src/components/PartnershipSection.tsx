@@ -26,8 +26,8 @@ const PartnershipSection = () => {
     }
   ];
 
-  // Duplicate the partners array to create a seamless loop
-  const extendedPartners = [...partners, ...partners];
+  // Create a very long list by repeating the partners array 5 times.
+  const extendedPartners = Array(5).fill(partners).flat();
 
   return (
     <section className="py-20 bg-transparent">
@@ -40,7 +40,7 @@ const PartnershipSection = () => {
       </div>
       
       <div className="w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-        <div className="flex flex-nowrap animate-infinite-scroll">
+        <div className="flex flex-nowrap animate-long-scroll">
           {extendedPartners.map((partner, index) => (
             <div 
               key={index} 
@@ -52,7 +52,6 @@ const PartnershipSection = () => {
                   'w-64': partner.name !== 'Sedgwick' && partner.name !== 'CRS'
                 }
               )}
-              aria-hidden={index >= partners.length}
             >
               <img
                 src={partner.logoUrl}
