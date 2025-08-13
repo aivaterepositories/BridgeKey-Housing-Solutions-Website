@@ -9,6 +9,12 @@ const PartnershipSection = () => {
       isLast: false,
     },
     {
+      name: 'CRS',
+      logoUrl: '/CRS-blk-and-Red-Door.png',
+      offsetY: 0,
+      isLast: false,
+    },
+    {
       name: 'ale solutions',
       logoUrl: '/ale_solutions_padded.png',
       offsetY: -15,
@@ -25,7 +31,7 @@ const PartnershipSection = () => {
           </h2>
         </div>
         
-        <div className="flex flex-nowrap justify-center gap-20 overflow-x-auto no-scrollbar">
+        <div className="flex flex-nowrap justify-center items-center gap-20 overflow-x-auto no-scrollbar">
           {partners.map((partner, index) => (
             <div
               key={index}
