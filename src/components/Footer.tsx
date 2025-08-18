@@ -45,8 +45,8 @@ const Footer = () => {
           {/* Contact and Copyright Group */}
           <div className="text-center text-hero-accent space-y-2">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-x-2 text-sm">
-              <a href="tel:+639123456789" className="hover:text-white transition-smooth">
-                +639123456789
+              <a href="tel:+12094362359" className="hover:text-white transition-smooth">
+                +1 (209) 436-2359
               </a>
               <span className="hidden sm:inline">|</span>
               <a href="mailto:sales@aivate.net" className="hover:text-white transition-smooth">
