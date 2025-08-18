@@ -17,7 +17,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCreateRequest }) => {
       
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <h1 className="text-7xl md:text-8xl font-bold mb-6 leading-tight">
-          <span className="text-primary">Building Bridges,</span>
+          <span className="text-primary">Building Bridges.</span>
           <br />
           <span className="text-black">
             Crafting Keys to Your Future Home.
