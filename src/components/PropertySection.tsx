@@ -1,49 +1,7 @@
 import React from 'react';
-import PropertyCard from './PropertyCard';
+import { Building2, Clock } from 'lucide-react';
 
 const PropertySection = () => {
-  const properties = [
-    {
-      id: '1',
-      title: 'Pinoy Big Brother House',
-      location: 'Mother Ignacia Ave, Quezon City',
-      price: '$22,001',
-      period: 'month',
-      beds: 5,
-      baths: 5,
-      sqft: '10',
-      description: 'The reality series house is famous for its array and blue facade designed to look trendy enough for social media but basic enough to feel like an ordinary family home. Due to AI popularity, it has become part...',
-      isFeatured: true,
-      imageUrl: '/property-pinoy-big-brother-house.png',
-    },
-    {
-      id: '2',
-      title: 'Aguinaldo Shrine',
-      location: 'Kawit, Cavite',
-      price: '$85,001',
-      period: 'month',
-      beds: 5,
-      baths: 2,
-      sqft: '20',
-      description: 'Found in Kawit Cavite Aguinaldo\'s mansion is one of the Philippines\' most significant historical landmarks. This is where Emilio Aguinaldo declared the Philippine independence from the Spanish Look...',
-      isFeatured: true,
-      imageUrl: '/property-aguinaldo-shrine.png',
-    },
-    {
-      id: '3',
-      title: 'Jollie House with Jollie Friends',
-      location: 'Jolliitown, Quezon City',
-      price: '$10,001',
-      period: 'month',
-      beds: 3,
-      baths: 2,
-      sqft: '30',
-      description: 'Step into this one-of-a-kind two-story character house, painted in both signature red and yellow. This cheerful house inspired by fast food, sun, and family...',
-      isFeatured: true,
-      imageUrl: '/property-jollie-house.png',
-    }
-  ];
-
   return (
     <section className="py-20 bg-transparent">
       <div className="max-w-5xl mx-auto px-6">
@@ -56,13 +14,32 @@ const PropertySection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {properties.map((property) => (
-            <PropertyCard
-              key={property.id}
-              {...property}
-            />
-          ))}
+        {/* Coming Soon Message */}
+        <div className="flex flex-col items-center justify-center py-20">
+          <div className="relative mb-8">
+            <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
+              <Building2 className="w-16 h-16 text-primary" />
+            </div>
+            <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+              <Clock className="w-6 h-6 text-white" />
+            </div>
+          </div>
+          
+          <h3 className="text-2xl font-bold mb-4 text-center">
+            Properties Coming Soon
+          </h3>
+          
+          <p className="text-muted-foreground text-center max-w-md mb-8">
+            We're currently curating an amazing selection of properties for you. 
+            In the meantime, feel free to create a request and we'll find the perfect match!
+          </p>
+          
+          <div className="flex items-center gap-2 text-sm text-primary font-medium">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+            <span className="ml-2">Loading new properties...</span>
+          </div>
         </div>
       </div>
     </section>
