@@ -16,8 +16,6 @@ const Footer = () => {
             {/* Logo and Brand */}
             <a 
               href="https://bridgekeyhousing.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <img src="/bkhs-logo-white.png" alt="BKHS Logo" className="h-10" />
