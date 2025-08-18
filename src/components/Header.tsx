@@ -50,10 +50,15 @@ const Header = () => {
     )}>
       <div className="max-w-5xl mx-auto flex items-center justify-between md:justify-center md:gap-12 px-6">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <a 
+          href="https://bridgekeyhousing.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+        >
           <img src="/bkhs-logo-white.png" alt="BKHS Logo" className="h-10" />
           <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
-        </div>
+        </a>
 
         {/* Navigation for Desktop */}
         <nav className="hidden md:flex items-center space-x-12">

@@ -14,10 +14,15 @@ const Footer = () => {
           {/* Logo and Social Media Row */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 text-center">
             {/* Logo and Brand */}
-            <div className="flex items-center gap-3">
+            <a 
+              href="https://bridgekeyhousing.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
               <img src="/bkhs-logo-white.png" alt="BKHS Logo" className="h-10" />
               <img src="/bkhs-text-white.png" alt="BridgeKey Housing Solutions" className="h-8" />
-            </div>
+            </a>
             
             {/* Social Media */}
             <div className="flex space-x-4">
