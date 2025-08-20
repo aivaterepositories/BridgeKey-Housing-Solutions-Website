@@ -22,7 +22,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
-import { Plus, Loader2 } from 'lucide-react';
+import { Plus, Loader2, Mail } from 'lucide-react';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address.' }),
@@ -76,7 +76,7 @@ const RequestModal: React.FC<RequestModalProps> = ({
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error(`Server responded with status: ${response.status}`);
       }
 
       console.log('Form submitted via edge function:', values);
@@ -87,8 +87,23 @@ const RequestModal: React.FC<RequestModalProps> = ({
       form.reset();
     } catch (error) {
       console.error('Failed to submit request:', error);
-      toast.error('Submission failed.', {
-        description: 'There was a problem submitting your request. Please try again later.',
+      toast.error('Submission Failed', {
+        description: (
+          <div className="space-y-2">
+            <p>We're experiencing technical difficulties with our submission system.</p>
+            <p>For immediate assistance, please send an email to:</p>
+            <div className="flex items-center gap-2 mt-2">
+              <Mail className="w-4 h-4" />
+              <a 
+                href="mailto:sales@aivate.net" 
+                className="text-blue-600 hover:text-blue-800 underline font-medium"
+              >
+                sales@aivate.net
+              </a>
+            </div>
+          </div>
+        ),
+        duration: 8000,
       });
     } finally {
       setIsSubmitting(false);
