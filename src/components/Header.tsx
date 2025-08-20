@@ -83,7 +83,7 @@ const Header = () => {
             variant="outline"
             className="text-sm text-white border-white hover:bg-primary hover:border-primary bg-transparent"
           >
-            <a href="mailto:sales@aivate.net">Contact Us</a>
+            <a href="mailto:bridgekey@aivate.net">Contact Us</a>
           </Button>
         </nav>
         
@@ -131,7 +131,7 @@ const Header = () => {
             className="text-lg text-white border-white hover:bg-primary hover:border-primary bg-transparent px-6 py-3"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <a href="mailto:sales@aivate.net">Contact Us</a>
+            <a href="mailto:bridgekey@aivate.net">Contact Us</a>
           </Button>
         </nav>
       </div>

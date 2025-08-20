@@ -52,8 +52,8 @@ const Footer = () => {
                 +1 (209) 436-2359
               </a>
               <span className="hidden sm:inline">|</span>
-              <a href="mailto:sales@aivate.net" className="hover:text-white transition-smooth">
-                sales@aivate.net
+              <a href="mailto:bridgekey@aivate.net" className="hover:text-white transition-smooth">
+                bridgekey@aivate.net
               </a>
             </div>
             <p className="text-xs">

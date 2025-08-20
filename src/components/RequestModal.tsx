@@ -95,10 +95,10 @@ const RequestModal: React.FC<RequestModalProps> = ({
             <div className="flex items-center gap-2 mt-2">
               <Mail className="w-4 h-4" />
               <a 
-                href="mailto:sales@aivate.net" 
+                href="mailto:bridgekey@aivate.net" 
                 className="text-blue-600 hover:text-blue-800 underline font-medium"
               >
-                sales@aivate.net
+                bridgekey@aivate.net
               </a>
             </div>
           </div>
